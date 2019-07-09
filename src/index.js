@@ -11,7 +11,9 @@ app.server = http.createServer(app);
 
 
 // menggunakan middleware
-
+app.use(bodyParser.json({
+  limit: config.bodyLimit
+}));
 
 // passport config
 
